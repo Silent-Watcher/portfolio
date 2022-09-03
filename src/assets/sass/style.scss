@@ -1,2 +1,6 @@
 @charset 'utf-8';
 @import 'global/font';
+@import 'global/color';
+@import 'global//sizing';
+@import 'global/typo'; //should place before the reset
+@import 'global/reset';
