@@ -2,6 +2,9 @@ const $ = document;
 function _id(id) {
   return $.querySelector(`#${id}`);
 }
+function navLinkAction() {
+  navMenu.classList.remove('show-menu');
+}
 // menu
 const navMenu = _id('nav-menu'),
   navToggle = _id('nav-toggle'),
@@ -18,10 +21,6 @@ if (navClose) {
   navClose.addEventListener('click', function () {
     navMenu.classList.remove('show-menu');
   });
-}
-
-function navLinkAction() {
-  navMenu.classList.remove('show-menu');
 }
 
 navLinks.forEach((navLink) => {
