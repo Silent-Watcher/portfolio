@@ -28,3 +28,8 @@ ul,ol {
 a{
     text-decoration: none;
 }
+
+::selection{
+  background-color: var(--first-color);
+  color: #f5f5f5;
+}
