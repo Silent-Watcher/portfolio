@@ -4,5 +4,8 @@
 @import 'global//sizing';
 @import 'global/typo'; //should place before the reset
 @import 'global/reset';
+@import 'global/layout';
 @import 'media/font_media';
 @import 'utilities/section';
+@import 'media/nav_media';
+@import 'components/header';

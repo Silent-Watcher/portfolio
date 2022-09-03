@@ -2,8 +2,32 @@ doctype html
 html(lang="en")
     include includes/_head
     include includes/_body
-        ul
-            li item1
-            li item2
-            li item3
+                    header#header.header 
+                        nav.nav.container
+                            a(href="#").nav__logo HELIA
+                            .nav__menu#nav-menu
+                                ul.nav__list.grid
+                                    li.nav__item
+                                        a.nav__link(href="#home") Home
+                                            i.uil.uil-estate.nav__icon
+                                    li.nav__item
+                                        a.nav__link(href="#about") About
+                                            i.uil.uil-user.nav__icon
+                                    li.nav__item
+                                        a.nav__link(href="#skills") Skills
+                                            i.uil.uil-file-alt.nav__icon
+                                    li.nav__item
+                                        a.nav__link(href="#services") Services
+                                            i.uil.uil-briefcase-alt.nav__icon
+                                    li.nav__item
+                                        a.nav__link(href="#portfolio") Portfolio
+                                            i.uil.uil-scenery.nav__icon
+                                    li.nav__item
+                                        a.nav__link(href="#contact") Contact me
+                                            i.uil.uil-message.nav__icon
+                                i.uil.uil-times.nav__close#nav-close
+                            .nav__btns 
+                                .nav__toggle#nav-toggle
+                                    i.uil.uil-apps
+
     include includes/_scripts

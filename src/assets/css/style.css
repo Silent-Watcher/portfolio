@@ -43,6 +43,9 @@
 
 * {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -67,6 +70,12 @@ ul > li, ol > li {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
 }
 
 @media screen and (min-width: 968px) {
@@ -101,4 +110,81 @@ a {
 .grid {
   display: grid;
   gap: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.149);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s;
+  }
+}
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+.header .nav {
+  max-width: 968px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav .nav__logo,
+.header .nav .nav__toggle {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+.header .nav .nav__logo:hover {
+  color: var(--first-color);
+}
+.header .nav .nav__toggle {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.header .nav .nav__toggle:hover {
+  color: var(--first-color);
+}
+.header .nav .nav__menu .nav__list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.header .nav .nav__menu .nav__list .nav__item .nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+.header .nav .nav__menu .nav__list .nav__item .nav__link:hover {
+  color: var(--first-color);
+}
+.header .nav .nav__menu .nav__list .nav__item .nav__link .nav__icon {
+  font-size: 1.2rem;
+}
+.header .nav .nav__menu .nav__close {
+  position: absolute;
+  right: 1.3rem;
+  bottom: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--first-color);
+}
+.header .nav .nav__menu .nav__close:hover {
+  color: var(--first-color-alt);
+}
+
+.show-menu {
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */
