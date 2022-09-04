@@ -44,12 +44,11 @@
 //   right: -0.5rem !important;
 // }
 
-.swiper-pagination {
-  position: relative;
-}
+// .swiper-pagination {
+//   position: relative;
+// }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: -2.5rem !important;
   > .swiper-pagination-bullet {
     background-color: var(--first-color);
   }

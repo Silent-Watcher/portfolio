@@ -95,3 +95,18 @@ var swiper = new Swiper(".portfolio__container", {
   },
   // keyboard: true,
 });
+// testimonial slider 
+let swiper2 = new Swiper(".testimonial__container", {
+  loop:true,
+  grabCursor:true,
+  spaceBetween :48,
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
+  breakpoints:{
+    568:{
+      slidesPerView:2,
+    }
+  }
+});
