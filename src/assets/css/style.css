@@ -271,9 +271,6 @@ a {
 #home .home__container .home__content .home__data .home__description {
   margin-bottom: var(--mb-2);
 }
-#home .home__container .home__scroll {
-  display: none;
-}
 #home .home__container .home__scroll .home__scroll-button {
   color: var(--first-color);
   transition: 0.3s;
@@ -331,4 +328,131 @@ a {
 .about__buttons {
   display: flex;
   justify-content: center;
+}
+
+.skills__container {
+  row-gap: 0;
+}
+
+.skills__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-2-5);
+  cursor: pointer;
+}
+
+.skills__icon,
+.skills__arrow {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.skills__icon {
+  margin-right: var(--mb-0-75);
+}
+
+.skills__title {
+  font-size: var(--h3-font-size);
+}
+
+.skills__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.skills__arrow {
+  margin-left: auto;
+  transition: 0.4s;
+}
+
+.skills__list {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+
+.skills__titles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+}
+
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.skills__bar,
+.skills__percentage {
+  height: 5px;
+  border-radius: 0.25rem;
+}
+
+.skills__bar {
+  background-color: var(--first-color-lighter);
+}
+
+.skills__percentage {
+  display: block;
+  background-color: var(--first-color);
+}
+
+.skills__html {
+  width: 90%;
+}
+
+.skills__css {
+  width: 30%;
+}
+
+.skills__js {
+  width: 55%;
+}
+
+.skills__react {
+  width: 70%;
+}
+
+.skills__php {
+  width: 100%;
+}
+
+.skills__laravel {
+  width: 90%;
+}
+
+.skills__graph {
+  width: 55%;
+}
+
+.skills__livewire {
+  width: 60%;
+}
+
+.skills__figma {
+  width: 90%;
+}
+
+.skills__sketch {
+  width: 20%;
+}
+
+.skills__photoshop {
+  width: 55%;
+}
+
+.skills__close .skills__list {
+  height: 0;
+  overflow: hidden;
+}
+
+.skills__open .skills__list {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  overflow: hidden;
+  margin-bottom: var(--mb-2-5);
+}
+
+.skills__open .skills__arrow {
+  transform: rotate(-180deg);
 }/*# sourceMappingURL=style.css.map */

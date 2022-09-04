@@ -26,3 +26,19 @@ if (navClose) {
 navLinks.forEach((navLink) => {
   navLink.addEventListener('click', navLinkAction);
 });
+// skills section
+const skillsContent = $.getElementsByClassName('skills__content'),
+  skillsHeader = $.querySelectorAll('.skills__header');
+function toggleSkills() {
+  let itemClass = this.parentNode.className;
+  [...skillsContent].forEach((skillContent) => {
+    skillContent.className = 'skills__content skills__close';
+  });
+  if (itemClass === 'skills__content skills__close') {
+    this.parentNode.className = 'skills__content skills__open ';
+  }
+}
+skillsHeader.forEach((el) => {
+  el.addEventListener('click', toggleSkills);
+});
+// 
