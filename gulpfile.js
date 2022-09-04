@@ -13,10 +13,10 @@ import plumber from 'gulp-plumber';
 import pug from 'gulp-pug';
 import rename from 'gulp-rename';
 
-browserSync.create();
+// browserSync.create();
 
-const sass = gulpSass(dartSass),
-  reload = browserSync.reload;
+const sass = gulpSass(dartSass);
+  // reload = browserSync.reload;
 
 const root = './',
   cssDest = root + 'src/assets/css',
@@ -108,7 +108,7 @@ gulp.task('watch', async () => {
       'dist/assets/js/*.js',
       phpWatchFiles,
     ])
-    .on('change', reload);
+    // .on('change', reload);
 });
 
 const build = gulp.series(
@@ -116,7 +116,7 @@ const build = gulp.series(
   'compilePug',
   'compileSass',
   'cleanJs',
-  'watch'
+  // 'watch'
 );
 //default
 gulp.task('default', build);
