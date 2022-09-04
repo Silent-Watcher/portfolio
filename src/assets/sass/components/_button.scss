@@ -18,3 +18,15 @@
     display: inline-flex;
     align-items: center;
 }
+.button--small{
+  padding: .75rem 1rem ;
+}
+.button--link{
+  padding:0;
+  background-color: transparent;
+  color: var(--first-color);
+  &:hover{
+    background-color: transparent;
+    color: var(--first-color-alt);
+  }
+}

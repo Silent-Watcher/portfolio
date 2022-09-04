@@ -51,9 +51,29 @@ tabs.forEach((tab) => {
       tabContent.classList.remove('qualification__active');
     });
     target.classList.add('qualification__active');
-    tabs.forEach(tab=>{
+    tabs.forEach((tab) => {
       tab.classList.remove('qualification__active');
-    })
+    });
     tab.classList.add('qualification__active');
   });
 });
+// services => modal
+const modalViews = $.querySelectorAll('.services__modal'),
+  modalBtns = $.querySelectorAll('.services__button'),
+  modalCloses = $.querySelectorAll('.service__modal-close');
+let modal = function (modalClick) {
+  modalViews[modalClick].classList.add('active-modal');
+};
+modalBtns.forEach((modalBtn, i) => {
+  modalBtn.addEventListener('click', () => {
+    modal(i);
+  });
+});
+modalCloses.forEach((modalClose) => {
+  modalClose.addEventListener('click', function () {
+    modalViews.forEach((modalView) => {
+      modalView.classList.remove('active-modal');
+    });
+  });
+});
+// 
