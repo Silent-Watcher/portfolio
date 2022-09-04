@@ -38,8 +38,8 @@ html(lang="en")
                         a.home__scroll-button.button--flex(href="#about") 
                             lord-icon.home__scroll-mouse(src='https://cdn.lordicon.com/wtfdpwey.json' trigger='loop' style='width:45px;height:45px' colors="primary:#6e57e0,secondary:#4f1091" stroke="35")
                             span.home__scroll-name Scroll down
-        //- about
-        section.section.about#about 
+            //- about
+            section.section.about#about 
             h2.section__title About Me 
             span.section__subtitle  My introduction 
             .about__container.container.grid 
@@ -59,8 +59,8 @@ html(lang="en")
                     .about__buttons
                         a.button.button--flex(href="" download='') Download CV
                             i.uil.uil-download-alt.button__icon
-        //- skills
-        section.section.skills#skills 
+            //- skills
+            section.section.skills#skills 
             h2.section__title Skills 
             span.section__subtitle My technical level 
             .skills__container.container.grid 
@@ -156,8 +156,8 @@ html(lang="en")
                                     span.skills__number 55% 
                                 .skills__bar 
                                     span.skills__percentage.skills__photoshop
-        //- qualification
-        section.qualification.section 
+            //- qualification
+            section.qualification.section 
             h2.section__title Qualification 
             span.section__subtitle My personal journey 
             .qualification__container.container 
@@ -242,8 +242,8 @@ html(lang="en")
                             div 
                                 span.qualification__rounder
                                 //- span.qualification__line
-        //- services 
-        section.section.services#services
+            //- services 
+            section.section.services#services
             h2.section__title Services
             span.section__subtitle What i offer 
             .services__container.container.grid 
@@ -324,38 +324,48 @@ html(lang="en")
                                 li.service__modal-service 
                                     i.uil.uil-check-circle.service__modal-icon
                                     p I position your company brand.
-        //- portfolio 
-        section.portfolio.section#portfolio
-            h2.section__title Portfolio 
-            span.section__subtitle Most recent works
-            .portfolio__container.container.swiper.mySwiper
-                div.swiper-wrapper 
-                    .portfolio__content.grid.swiper-slide
-                        img.portfolio__img.img-fluid(src="assets/img/portfolio1.jpg", alt="portfolio")
-                        .portfolio__data 
-                            h3.portfolio__title Modern website 
-                            p.portfolio__description Website adaptable to all devices, with ui components and animated interactions.
-                            a.button.button--small.button--flex.portfolio__button(href="#") Demo    
-                                i.uil.uil-arrow-right.button__icon
-                    .portfolio__content.grid.swiper-slide 
-                        img.portfolio__img.img-fluid(src="assets/img/portfolio2.jpg", alt="portfolio")
-                        .portfolio__data 
-                            h3.portfolio__title Brand design
-                            p.portfolio__description Website adaptable to all devices, with ui components and animated interactions.
-                            a.button.button--small.button--flex.portfolio__button(href="#") Demo    
-                                i.uil.uil-arrow-right.button__icon
-                    .portfolio__content.grid.swiper-slide 
-                        img.portfolio__img.img-fluid(src="assets/img/portfolio3.jpg", alt="portfolio")
-                        .portfolio__data 
-                            h3.portfolio__title Online store
-                            p.portfolio__description Website adaptable to all devices, with ui components and animated interactions.
-                            a.button.button--small.button--flex.portfolio__button(href="#") Demo    
-                                i.uil.uil-arrow-right.button__icon
-                .swiper-button-next
-                    i.uil.uil-angle-right-b.swiper-portfolio-icon
-                .swiper-button-prev
-                    i.uil.uil-angle-left-b.swiper-portfolio-icon
-                .swiper-pagination
+            //- portfolio 
+            section.portfolio.section#portfolio
+                h2.section__title Portfolio 
+                span.section__subtitle Most recent works
+                .portfolio__container.container.swiper.mySwiper
+                    div.swiper-wrapper 
+                        .portfolio__content.grid.swiper-slide
+                            img.portfolio__img.img-fluid(src="assets/img/portfolio1.jpg", alt="portfolio")
+                            .portfolio__data 
+                                h3.portfolio__title Modern website 
+                                p.portfolio__description Website adaptable to all devices, with ui components and animated interactions.
+                                a.button.button--small.button--flex.portfolio__button(href="#") Demo    
+                                    i.uil.uil-arrow-right.button__icon
+                        .portfolio__content.grid.swiper-slide 
+                            img.portfolio__img.img-fluid(src="assets/img/portfolio2.jpg", alt="portfolio")
+                            .portfolio__data 
+                                h3.portfolio__title Brand design
+                                p.portfolio__description Website adaptable to all devices, with ui components and animated interactions.
+                                a.button.button--small.button--flex.portfolio__button(href="#") Demo    
+                                    i.uil.uil-arrow-right.button__icon
+                        .portfolio__content.grid.swiper-slide 
+                            img.portfolio__img.img-fluid(src="assets/img/portfolio3.jpg", alt="portfolio")
+                            .portfolio__data 
+                                h3.portfolio__title Online store
+                                p.portfolio__description Website adaptable to all devices, with ui components and animated interactions.
+                                a.button.button--small.button--flex.portfolio__button(href="#") Demo    
+                                    i.uil.uil-arrow-right.button__icon
+                    .swiper-button-next
+                        i.uil.uil-angle-right-b.swiper-portfolio-icon
+                    .swiper-button-prev
+                        i.uil.uil-angle-left-b.swiper-portfolio-icon
+                    .swiper-pagination
+            //- project in mind 
+            section.section.project
+                .project__bg 
+                    .project__container.container.grid 
+                        .project__data 
+                            h2.project__title You have a new project 
+                            p.project__description Contact me now and get a 30% discount on your new project.
+                            a.button.button-flex.button--white(href="#contact")  Contact me 
+                                i.uil.uil-message.project__icon.button__icon
+                        img.project__img.img-fluid(src="assets/img/inmind2.png", alt="")
 
 
 

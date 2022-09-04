@@ -21,6 +21,13 @@
 .button--small{
   padding: .75rem 1rem ;
 }
+.button--white{
+  background-color: #fff;
+  color: var(--first-color);
+  &:hover{
+    color: #fff;
+  }
+}
 .button--link{
   padding:0;
   background-color: transparent;

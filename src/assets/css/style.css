@@ -168,6 +168,14 @@ a {
   padding: 0.75rem 1rem;
 }
 
+.button--white {
+  background-color: #fff;
+  color: var(--first-color);
+}
+.button--white:hover {
+  color: #fff;
+}
+
 .button--link {
   padding: 0;
   background-color: transparent;
@@ -677,4 +685,27 @@ a {
 .swiper-button-prev,
 .swiper-pagination-bullets {
   outline: 0;
+}
+
+.project {
+  text-align: center;
+}
+.project .project__bg {
+  background-color: var(--first-color-second);
+  padding-top: 3rem;
+}
+.project .project__data .project__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+.project .project__data .project__description {
+  margin-bottom: var(--mb-1-5);
+}
+.project .project__data .project__title,
+.project .project__data .project__description {
+  color: #fff;
+}
+.project .project__img {
+  width: 180px;
+  justify-self: center;
 }/*# sourceMappingURL=style.css.map */
