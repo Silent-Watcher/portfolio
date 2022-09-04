@@ -1,0 +1,50 @@
+@media screen and (max-width: 350px) {
+  .container {
+    margin-left: var(--mb-1) !important;
+    margin-right: var(--mb-1) !important;
+  }
+  .nav__menu {
+    padding: 2rem 0.25rem 4rem !important;
+  }
+  .nav__list {
+    column-gap: 0 !important;
+  }
+  .home__content {
+    grid-template-columns: 0.25fr 3fr !important;
+  }
+  .home__blob {
+    width: 180px !important;
+  }
+  .skills__title {
+    font-size: var(--normal-font-size) !important;
+  }
+  .qualification__data {
+    gap: 0.5rem !important;
+  }
+  .services__container {
+    grid-template-columns: max-content !important;
+    justify-content: center !important;
+  }
+  .services__content {
+    padding-right: 3.5rem !important;
+  }
+  .services__modal {
+    padding-right: 0 0.5rem !important;
+  }
+  .project__img{
+    width: 200px!important;
+  }
+  .testimonial__data,
+  .testimonial__header{
+    flex-direction: column!important;
+    align-items: center!important;
+  }
+  .testimonial__img{
+    margin-right: 0!important;
+    margin-bottom: var(--mb-0-25!important);
+  }
+  .testimonial__data,
+  .testimonial__description{
+    text-align: center!important;
+  }
+}
