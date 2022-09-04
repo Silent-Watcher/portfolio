@@ -81,32 +81,56 @@ $.addEventListener('keyup', (event) => {
   if (event.key === 'Escape') closeModals();
 });
 //
-// swiper slider in portfolio section 
-var swiper = new Swiper(".portfolio__container", {
+// swiper slider in portfolio section
+var swiper = new Swiper('.portfolio__container', {
   cssMode: true,
-  loop:true,
+  loop: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   pagination: {
-    el: ".swiper-pagination",
-    clickable:true,
+    el: '.swiper-pagination',
+    clickable: true,
   },
   // keyboard: true,
 });
-// testimonial slider 
-let swiper2 = new Swiper(".testimonial__container", {
-  loop:true,
-  grabCursor:true,
-  spaceBetween :48,
+// testimonial slider
+let swiper2 = new Swiper('.testimonial__container', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 48,
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
     dynamicBullets: true,
   },
-  breakpoints:{
-    568:{
-      slidesPerView:2,
-    }
-  }
+  breakpoints: {
+    568: {
+      slidesPerView: 2,
+    },
+  },
 });
+// scroll spy
+const sections = $.querySelectorAll('section[id]');
+function scrollActive() {
+  const scrollY = window.scrollY;
+  sections.forEach((current) => {
+    const [sectionHeight, sectionTop] = [
+      current.offsetHeight,
+      current.offsetTop - 50,
+    ];
+    let sectionId = current.id;
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      $.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add(
+        'active-link'
+      );
+    } else {
+      $.querySelector(
+        '.nav__menu a[href*=' + sectionId + ']'
+      ).classList.remove('active-link');
+    }
+  });
+}
+window.addEventListener('scroll',scrollActive);
+// 
+
