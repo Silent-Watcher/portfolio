@@ -250,6 +250,7 @@ a {
 }
 
 #home .home__container {
+  text-align: center;
   gap: 1rem;
 }
 #home .home__container .home__content {
@@ -748,4 +749,46 @@ a {
 
 .swiper-pagination-testimonial {
   bottom: 0 !important;
+}
+
+.contact__container {
+  row-gap: 3rem;
+}
+
+.contact__information {
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+.contact__information .contact__icon {
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+}
+.contact__information .contact__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+.contact__information .contact_subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.contact__content {
+  background-color: var(--input-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+}
+.contact__content .contact__label {
+  font-size: var(--smaller-font-size);
+  color: var(--title-color);
+}
+.contact__content .contact__input {
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.5rem 0.5rem 0;
 }/*# sourceMappingURL=style.css.map */
