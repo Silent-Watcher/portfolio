@@ -140,3 +140,11 @@ function scrollHeader() {
   else nav.classList.remove('scroll-header');
 }
 window.addEventListener('scroll', scrollHeader);
+// scroll to top btn
+window.addEventListener('scroll', scrollUp);
+function scrollUp() {
+  const scrollUp = _id('scroll-up');
+
+  if (this.scrollY > 560) scrollUp.classList.add('show-scroll');
+  else scrollUp.classList.remove('show-scroll');
+}
