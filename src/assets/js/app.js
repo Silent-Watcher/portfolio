@@ -125,12 +125,18 @@ function scrollActive() {
         'active-link'
       );
     } else {
-      $.querySelector(
-        '.nav__menu a[href*=' + sectionId + ']'
-      ).classList.remove('active-link');
+      $.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove(
+        'active-link'
+      );
     }
   });
 }
-window.addEventListener('scroll',scrollActive);
-// 
-
+window.addEventListener('scroll', scrollActive);
+//
+// change header bg
+function scrollHeader() {
+  const nav = _id('header');
+  if (this.scrollY > 80) nav.classList.add('scroll-header');
+  else nav.classList.remove('scroll-header');
+}
+window.addEventListener('scroll', scrollHeader);
