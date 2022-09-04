@@ -328,29 +328,34 @@ html(lang="en")
         section.portfolio.section#portfolio
             h2.section__title Portfolio 
             span.section__subtitle Most recent works
-            .portfolio__container.container 
-                div 
-                    .portfolio__content.grid 
+            .portfolio__container.container.swiper.mySwiper
+                div.swiper-wrapper 
+                    .portfolio__content.grid.swiper-slide
                         img.portfolio__img.img-fluid(src="assets/img/portfolio1.jpg", alt="portfolio")
                         .portfolio__data 
                             h3.portfolio__title Modern website 
                             p.portfolio__description Website adaptable to all devices, with ui components and animated interactions.
                             a.button.button--small.button--flex.portfolio__button(href="#") Demo    
                                 i.uil.uil-arrow-right.button__icon
-                    .portfolio__content.grid 
+                    .portfolio__content.grid.swiper-slide 
                         img.portfolio__img.img-fluid(src="assets/img/portfolio2.jpg", alt="portfolio")
                         .portfolio__data 
                             h3.portfolio__title Brand design
                             p.portfolio__description Website adaptable to all devices, with ui components and animated interactions.
                             a.button.button--small.button--flex.portfolio__button(href="#") Demo    
                                 i.uil.uil-arrow-right.button__icon
-                    .portfolio__content.grid 
+                    .portfolio__content.grid.swiper-slide 
                         img.portfolio__img.img-fluid(src="assets/img/portfolio3.jpg", alt="portfolio")
                         .portfolio__data 
                             h3.portfolio__title Online store
                             p.portfolio__description Website adaptable to all devices, with ui components and animated interactions.
                             a.button.button--small.button--flex.portfolio__button(href="#") Demo    
                                 i.uil.uil-arrow-right.button__icon
+                .swiper-button-next
+                    i.uil.uil-angle-right-b.swiper-portfolio-icon
+                .swiper-button-prev
+                    i.uil.uil-angle-left-b.swiper-portfolio-icon
+                .swiper-pagination
 
 
 
