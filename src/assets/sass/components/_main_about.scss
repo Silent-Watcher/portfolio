@@ -10,6 +10,7 @@
 }
 .about__info {
   display: flex;
+  align-self: center;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2-5);
 }

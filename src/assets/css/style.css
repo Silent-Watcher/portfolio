@@ -275,7 +275,6 @@ a {
 }
 
 #home .home__container {
-  text-align: center;
   gap: 1rem;
 }
 #home .home__container .home__content {
@@ -352,6 +351,7 @@ a {
 
 .about__info {
   display: flex;
+  align-self: center;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2-5);
 }
@@ -695,6 +695,9 @@ a {
   color: var(--first-color);
 }
 
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: -2.5rem;
+}
 .swiper-container-horizontal > .swiper-pagination-bullets > .swiper-pagination-bullet {
   background-color: var(--first-color);
 }
@@ -968,5 +971,171 @@ a {
   .testimonial__data,
 .testimonial__description {
     text-align: center !important;
+  }
+}
+@media screen and (min-width: 568px) {
+  .home__content {
+    grid-template-columns: -webkit-max-content 1fr 1fr !important;
+    grid-template-columns: max-content 1fr 1fr !important;
+  }
+  .home__data {
+    grid-column: initial !important;
+  }
+  .home__img {
+    order: 1 !important;
+    justify-self: center !important;
+  }
+  .about__container,
+.skills__container,
+.portfolio__content,
+.project__container,
+.contact__container,
+.footer__container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .qualification__sections {
+    display: grid !important;
+    grid-template-columns: 0.6fr !important;
+    justify-content: center !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  body {
+    margin: 0 !important;
+  }
+  .section {
+    padding: 6rem 0 2rem !important;
+  }
+  .section__subtitle {
+    margin-bottom: 4rem !important;
+  }
+  .header {
+    top: 0 !important;
+    bottom: initial !important;
+  }
+  .header,
+.footer__container {
+    padding: 0 1rem !important;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem) !important;
+    -moz-column-gap: 1rem !important;
+         column-gap: 1rem !important;
+  }
+  .nav__icon,
+.nav__close,
+.nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    display: flex !important;
+    -moz-column-gap: 2rem !important;
+         column-gap: 2rem !important;
+  }
+  .nav__menu {
+    margin-left: auto !important;
+  }
+  .change-theme {
+    margin: 0 !important;
+  }
+  .home__container {
+    row-gap: 5rem !important;
+  }
+  .home__content {
+    padding-top: 5.5rem !important;
+    -moz-column-gap: 2rem !important;
+         column-gap: 2rem !important;
+  }
+  .home__blob {
+    width: 270px !important;
+  }
+  .home__scroll {
+    display: block;
+  }
+  .home__scroll-button {
+    margin-left: 3rem !important;
+  }
+  .about__container {
+    -moz-column-gap: 5rem !important;
+         column-gap: 5rem !important;
+  }
+  .about__img {
+    width: 350px !important;
+  }
+  .about__description {
+    text-align: initial !important;
+  }
+  .about__info {
+    justify-content: space-between !important;
+  }
+  .about__buttons {
+    justify-content: initial !important;
+  }
+  .qualification__tabs {
+    justify-content: center;
+  }
+  .qualification__button {
+    margin: 0 var(--mb-1) !important;
+  }
+  .qualification__sections {
+    grid-template-columns: 0.5fr !important;
+  }
+  .services__container {
+    grid-template-columns: repeat(3, 218px);
+    justify-content: center;
+  }
+  .services__icon {
+    font-size: 2rem !important;
+  }
+  .services__content {
+    padding: 6rem 0 2rem 2.5rem !important;
+  }
+  .services__modal-content {
+    width: 450px !important;
+  }
+  .portfolio__img {
+    width: 320px !important;
+  }
+  .portfolio__content {
+    align-items: center !important;
+  }
+  .project {
+    text-align: initial !important;
+  }
+  .project__bg {
+    background: none !important;
+  }
+  .project__container {
+    background-color: var(--first-color) !important;
+    border-radius: 1rem !important;
+    padding: 3rem 2.5rem 0 !important;
+    grid-template-columns: 1fr -webkit-max-content !important;
+    grid-template-columns: 1fr max-content !important;
+    -moz-column-gap: 3rem !important;
+         column-gap: 3rem !important;
+  }
+  .project__data {
+    padding-top: 0.8rem !important;
+  }
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .footer__bg {
+    padding: 3rem 0 3.5rem !important;
+  }
+  .footer__links {
+    flex-direction: row !important;
+    -moz-column-gap: 2rem !important;
+         column-gap: 2rem !important;
+  }
+  .footer__socials {
+    justify-self: flex-end !important;
+  }
+  .footer__copy {
+    margin-top: 4.5rem !important;
   }
 }/*# sourceMappingURL=style.css.map */
