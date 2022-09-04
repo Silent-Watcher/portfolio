@@ -1,5 +1,5 @@
 :root {
-  --hue-color: 340; // green : 142 , blue: 230 , purple:250
+  --hue-color: 340; // green : 142 , blue: 230 , purple:250, pink:340
   // hsl color mode
   --first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
@@ -11,4 +11,12 @@
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #fff;
+}
+body.dark-theme{
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: hsl(var(--hue-color),29%,16%);
 }

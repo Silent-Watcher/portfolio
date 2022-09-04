@@ -148,3 +148,30 @@ function scrollUp() {
   if (this.scrollY > 560) scrollUp.classList.add('show-scroll');
   else scrollUp.classList.remove('show-scroll');
 }
+// dark/light theme
+const themeButton = _id('theme-button');
+const [darkTheme, iconTheme] = ['dark-theme', 'uil-sun'];
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+const getCurrentTheme = () => {
+  return $.body.classList.contains(darkTheme) ? 'dark' : 'light';
+};
+const getCurrentIcon = () => {
+  themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
+};
+
+if (selectedTheme) {
+  $.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](
+    iconTheme
+  );
+}
+
+themeButton.addEventListener('click', () => {
+  $.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+
+  localStorage.setItem('selected-theme', getCurrentTheme());
+  localStorage.setItem('selected-icon', getCurrentIcon());
+});

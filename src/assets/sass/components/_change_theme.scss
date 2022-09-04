@@ -1,0 +1,13 @@
+.nav__btns{
+    display: flex;
+    align-items: center;
+    > .change-theme{
+        font-size: 1.25rem;
+        color: var(--title-color);
+        margin-right: var(--mb-1);
+        cursor: pointer;
+        &:hover{
+            color: var(--first-color);
+        }
+    }
+}
