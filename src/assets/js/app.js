@@ -70,10 +70,14 @@ modalBtns.forEach((modalBtn, i) => {
   });
 });
 modalCloses.forEach((modalClose) => {
-  modalClose.addEventListener('click', function () {
-    modalViews.forEach((modalView) => {
-      modalView.classList.remove('active-modal');
-    });
-  });
+  modalClose.addEventListener('click', closeModals);
 });
-// 
+function closeModals() {
+  modalViews.forEach((modalView) => {
+    modalView.classList.remove('active-modal');
+  });
+}
+$.addEventListener('keyup', (event) => {
+  if (event.key === 'Escape') closeModals();
+});
+//
