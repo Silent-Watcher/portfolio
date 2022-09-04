@@ -1138,4 +1138,42 @@ a {
   .footer__copy {
     margin-top: 4.5rem !important;
   }
+}
+@media screen and (min-width: 1024px) {
+  .header,
+.main,
+.footer__container {
+    padding: 0 !important;
+  }
+  .home__blob {
+    width: 320px !important;
+  }
+  .home__social {
+    transform: translateX(-6rem) !important;
+  }
+  .services__container {
+    grid-template-columns: repeat(3, 238px) !important;
+  }
+  .portfolio__content {
+    -moz-column-gap: 5rem !important;
+         column-gap: 5rem !important;
+  }
+  .swiper-portfolio-icon {
+    font-size: 3.5rem !important;
+  }
+  .swiper-button-prev {
+    left: -3.5rem !important;
+  }
+  .swiper-button-next {
+    right: -3.5rem !important;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: -4.5rem !important;
+  }
+  .contact__form {
+    width: 460px !important;
+  }
+  .contact__inputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */
