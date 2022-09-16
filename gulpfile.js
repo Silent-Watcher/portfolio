@@ -16,7 +16,7 @@ import rename from 'gulp-rename';
 // browserSync.create();
 
 const sass = gulpSass(dartSass);
-  // reload = browserSync.reload;
+// reload = browserSync.reload;
 
 const root = './',
   cssDest = root + 'src/assets/css',
@@ -87,35 +87,41 @@ gulp.task('compilePug', async () => {
     .pipe(gulp.dest('dist/'));
 });
 
+// move manifest.json file to the dist directory
+gulp.task('moveManifest', async () => {
+  gulp.src('./src/manifest.json').pipe(gulp.dest('dist/'));
+});
+
 //watch
 gulp.task('watch', async () => {
-  browserSync.init({
-    server: ['./dist/'],
-    online: false,
-    ghostMode: false,
-    open: 'external',
-    ui: false,
-    // proxy:
-  });
+  // browserSync.init({
+  //   server: ['./dist/'],
+  //   online: false,
+  //   ghostMode: false,
+  //   open: 'external',
+  //   ui: false,
+  // proxy:
+  // });
   gulp.watch('src/assets/pug/index.pug', gulp.series('compilePug'));
   gulp.watch(sassSrc + '**/*.scss', gulp.series('compileSass'));
   gulp.watch(jsSrc, gulp.series('cleanJs'));
   gulp.watch(imgSrc, gulp.series('img'));
-  gulp
-    .watch([
-      'dist/*.html',
-      'dist/assets/css/*.css',
-      'dist/assets/js/*.js',
-      phpWatchFiles,
-    ])
-    // .on('change', reload);
+  // gulp
+  //   .watch([
+  //     'dist/*.html',
+  //     'dist/assets/css/*.css',
+  //     'dist/assets/js/*.js',
+  //     phpWatchFiles,
+  //   ])
+  // .on('change', reload);
 });
 
 const build = gulp.series(
+  'moveManifest',
   'img',
   'compilePug',
   'compileSass',
-  'cleanJs',
+  'cleanJs'
   // 'watch'
 );
 //default
